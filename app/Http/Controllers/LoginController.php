@@ -29,13 +29,6 @@ class LoginController extends Controller
             'password' => 'required|string',
         ]);
 
-        /*
-        |--------------------------------------------------------------------------
-        | Login Admin lewat halaman Login Klien
-        |--------------------------------------------------------------------------
-        | Untuk tugas kuliah, admin masih dibuat sederhana/hardcode.
-        | Kalau username dan password cocok, langsung masuk dashboard admin.
-        */
         $admin = Admin::where('username', $validated['username'])->first();
 
         if ($admin && Hash::check($validated['password'], $admin->password)) {
@@ -50,12 +43,6 @@ class LoginController extends Controller
             return redirect()->route('admin.dashboard');
         }
 
-        /*
-        |--------------------------------------------------------------------------
-        | Login Klien
-        |--------------------------------------------------------------------------
-        | Kalau bukan admin, baru dicek ke tabel clients.
-        */
         $client = Client::where('username', $validated['username'])->first();
 
         if (!$client || !Hash::check($validated['password'], $client->password)) {
@@ -64,7 +51,7 @@ class LoginController extends Controller
                 ->withInput();
         }
 
-        session()->forget(['admin_logged_in', 'admin_name']);
+        session()->forget(['admin_logged_in', 'admin_id', 'admin_name']);
 
         session([
             'client_id' => $client->id,
@@ -83,6 +70,6 @@ class LoginController extends Controller
             'admin_name',
         ]);
 
-        return redirect()->route('login');
+        return redirect()->route('home');
     }
 }
