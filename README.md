@@ -24,18 +24,6 @@ Isi website mengambil data dari database, bukan hardcode langsung di halaman.
 
 Klien dapat login menggunakan akun yang sudah dibuat oleh admin. Setelah login, klien dapat melihat dashboard performa bisnisnya.
 
-Contoh akun klien:
-
-```text
-Username: kopi_nusantara
-Password: doubletap123
-```
-
-```text
-Username: thrift_borneo
-Password: growth123
-```
-
 ### 3. Dashboard Klien
 
 Dashboard klien menampilkan data seperti:
@@ -48,16 +36,7 @@ Dashboard klien menampilkan data seperti:
 
 ### 4. Login Admin
 
-Admin dapat login melalui halaman login yang sama dengan klien.
-
-Contoh akun admin:
-
-```text
-Username: admin
-Password: admin123
-```
-
-Akun admin disimpan di database melalui seeder.
+Admin dapat login melalui halaman login yang sama dengan klien. Data akun admin disimpan di database melalui seeder.
 
 ### 5. Dashboard Admin
 
@@ -92,13 +71,13 @@ Fitur admin:
 Clone repository:
 
 ```bash
-git clone https://github.com/username/nama-repository.git
+git clone https://github.com/AhmadUlyani/DoubleTap-Agency.git
 ```
 
 Masuk ke folder project:
 
 ```bash
-cd nama-repository
+cd DoubleTap_Agency
 ```
 
 Install dependency Laravel:
@@ -152,13 +131,6 @@ Jalankan perintah:
 php artisan migrate:fresh --seed
 ```
 
-Perintah ini akan:
-
-- Menghapus tabel lama
-- Membuat ulang tabel database
-- Mengisi data awal website
-- Membuat akun admin dan akun klien contoh
-
 ---
 
 ## Menjalankan Website
@@ -190,7 +162,7 @@ Password: admin123
 
 ```text
 Username: kopi_nusantara
-Password: doubletap123
+Password: starter123
 ```
 
 ### Klien Growth
@@ -217,54 +189,3 @@ Password: growth123
 ```
 
 ---
-
-## Catatan Pengembangan
-
-Beberapa hal penting pada project ini:
-
-- Data website disimpan di database menggunakan migration dan seeder.
-- Login admin menggunakan tabel `admins`, bukan hardcode di controller.
-- Login klien menggunakan tabel `clients`.
-- Sistem login masih menggunakan session manual sederhana.
-- Dashboard admin digunakan untuk mengelola data pengguna atau klien terdaftar.
-- File CSS utama berada di `public/css/style.css`.
-
----
-
-## Perintah Laravel yang Sering Digunakan
-
-Membersihkan cache:
-
-```bash
-php artisan optimize:clear
-```
-
-Menjalankan ulang migration dan seeder:
-
-```bash
-php artisan migrate:fresh --seed
-```
-
-Menjalankan server lokal:
-
-```bash
-php artisan serve
-```
-
-Melihat daftar route:
-
-```bash
-php artisan route:list
-```
-
----
-
-## Author
-
-Project ini dibuat oleh:
-
-```text
-Ahmad Ulyani
-Teknologi Informasi
-Universitas Lambung Mangkurat
-```

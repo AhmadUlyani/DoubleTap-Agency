@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
             'username' => 'admin',
             'password' => Hash::make('admin123'),
         ]);
-        
+
         DB::table('client_hashtags')->delete();
         DB::table('client_reach_trends')->delete();
         DB::table('client_recommendations')->delete();
@@ -167,7 +167,7 @@ class DatabaseSeeder extends Seeder
             ['question' => 'Area mana saja yang dilayani untuk liputan video?', 'answer' => 'Saat ini kami melayani area Banjarmasin dan Banjarbaru. Untuk di luar area tersebut, bisa didiskusikan dengan tambahan biaya transportasi.', 'sort_order' => 6, 'created_at' => $now, 'updated_at' => $now],
         ]);
 
-        $kopiId = DB::table('clients')->insertGetId(['business_name' => 'Kopi Nusantara', 'username' => 'kopi_nusantara', 'password' => Hash::make('doubletap123'), 'business_type' => 'F&B / Kedai Kopi', 'service_package_id' => $starterId, 'created_at' => $now, 'updated_at' => $now]);
+        $kopiId = DB::table('clients')->insertGetId(['business_name' => 'Kopi Nusantara', 'username' => 'kopi_nusantara', 'password' => Hash::make('starter123'), 'business_type' => 'F&B / Kedai Kopi', 'service_package_id' => $starterId, 'created_at' => $now, 'updated_at' => $now]);
         $thriftId = DB::table('clients')->insertGetId(['business_name' => 'Thrift Borneo', 'username' => 'thrift_borneo', 'password' => Hash::make('growth123'), 'business_type' => 'Fashion / Thrift Shop', 'service_package_id' => $growthId, 'created_at' => $now, 'updated_at' => $now]);
 
         $this->seedClientDashboard($kopiId, false, $now);
