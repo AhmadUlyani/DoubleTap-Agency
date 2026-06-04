@@ -150,13 +150,13 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('tools')->insert([
-            ['name' => 'Figma', 'category' => 'UI/UX Design', 'icon' => '🎨', 'sort_order' => 1, 'created_at' => $now, 'updated_at' => $now],
-            ['name' => 'Canva Pro', 'category' => 'Desain Grafis', 'icon' => '✏️', 'sort_order' => 2, 'created_at' => $now, 'updated_at' => $now],
-            ['name' => 'CapCut Pro', 'category' => 'Editing Video', 'icon' => '🎬', 'sort_order' => 3, 'created_at' => $now, 'updated_at' => $now],
-            ['name' => 'Meta Business Suite', 'category' => 'Scheduling', 'icon' => '📅', 'sort_order' => 4, 'created_at' => $now, 'updated_at' => $now],
-            ['name' => 'Google Analytics', 'category' => 'Analitik Data', 'icon' => '📈', 'sort_order' => 5, 'created_at' => $now, 'updated_at' => $now],
-            ['name' => 'Google Workspace', 'category' => 'Kolaborasi Tim', 'icon' => '💼', 'sort_order' => 6, 'created_at' => $now, 'updated_at' => $now],
-        ]);
+            ['icon' => 'figma.png', 'name' => 'Figma', 'category' => 'UI/UX Design', 'sort_order' => 1, 'created_at' => $now, 'updated_at' => $now],
+            ['icon' => 'canva.png', 'name' => 'Canva Pro', 'category' => 'Desain Grafis', 'sort_order' => 2, 'created_at' => $now, 'updated_at' => $now],
+            ['icon' => 'capcut.png', 'name' => 'CapCut Pro', 'category' => 'Editing Video', 'sort_order' => 3, 'created_at' => $now, 'updated_at' => $now],
+            ['icon' => 'meta-business.png', 'name' => 'Meta Business Suite', 'category' => 'Scheduling', 'sort_order' => 4, 'created_at' => $now, 'updated_at' => $now],
+            ['icon' => 'google-analytics.png', 'name' => 'Google Analytics', 'category' => 'Analitik Data', 'sort_order' => 5, 'created_at' => $now, 'updated_at' => $now],
+            ['icon' => 'google-workspace.png', 'name' => 'Google Workspace', 'category' => 'Kolaborasi Tim', 'sort_order' => 6, 'created_at' => $now, 'updated_at' => $now],
+        ]); 
 
         DB::table('faqs')->insert([
             ['question' => 'Apakah saya bisa minta revisi desain?', 'answer' => 'Bisa. Setiap konten mendapat 2x revisi sebelum diposting. Kami memastikan kamu puas sebelum konten tayang.', 'sort_order' => 1, 'created_at' => $now, 'updated_at' => $now],

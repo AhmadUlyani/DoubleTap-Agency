@@ -77,10 +77,17 @@
     <div class="tools-container">
         <div class="section-label text-center">Tech Stack</div>
         <h2 class="section-title text-center">Tools yang Kami Gunakan</h2>
+
         <div class="tools-grid">
             <?php foreach ($tools as $t): ?>
             <div class="tool-card fade-in">
-                <div class="tool-icon"><?= $t['icon'] ?></div>
+                <div class="tool-icon tool-logo-wrap">
+                    <img
+                        src="{{ asset('images/tools/' . $t['icon']) }}"
+                        alt="<?= htmlspecialchars($t['name']) ?>"
+                        class="tool-logo-img"
+                    >
+                </div>
                 <div class="tool-name"><?= htmlspecialchars($t['name']) ?></div>
                 <div class="tool-cat"><?= htmlspecialchars($t['category']) ?></div>
             </div>

@@ -1057,3 +1057,57 @@ img { max-width: 100%; }
         align-items: flex-start;
     }
 }
+
+.tool-logo-wrap {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.tool-logo-img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    display: block;
+}
+
+.contact-bonus-box {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: 900px;
+    margin: 24px auto 0;
+    padding: 28px 32px;
+}
+
+.contact-bonus-box h4 {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.contact-bonus-box ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.contact-bonus-box li {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 14px 16px;
+    line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+    .contact-bonus-box ul {
+        grid-template-columns: 1fr;
+    }
+}
