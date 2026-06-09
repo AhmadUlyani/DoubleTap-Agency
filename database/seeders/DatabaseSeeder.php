@@ -115,9 +115,9 @@ class DatabaseSeeder extends Seeder
         }
 
         DB::table('portfolios')->insert([
-            ['icon' => '☕', 'theme' => 'theme-coffee', 'type' => 'F&B Content Mockup', 'title' => 'Kampanye Menu Kopi Susu Signature', 'description' => 'Mockup feed Instagram untuk kedai kopi lokal dengan fokus pada foto produk, promo bundling, dan caption ajakan kunjungan.', 'likes' => '428', 'reach' => '6.2K', 'tags' => json_encode(['Feed IG', 'Copywriting', 'Promo Menu']), 'sort_order' => 1, 'created_at' => $now, 'updated_at' => $now],
-            ['icon' => '👗', 'theme' => 'theme-fashion', 'type' => 'Fashion Content Mockup', 'title' => 'Lookbook Thrift: Mix & Match OOTD', 'description' => 'Simulasi konten carousel dan Reels/TikTok untuk thrift shop, menonjolkan styling produk dan detail katalog yang lebih rapi.', 'likes' => '612', 'reach' => '8.5K', 'tags' => json_encode(['Carousel', 'Reels', 'OOTD']), 'sort_order' => 2, 'created_at' => $now, 'updated_at' => $now],
-            ['icon' => '📊', 'theme' => 'theme-report', 'type' => 'Monthly Report Mockup', 'title' => 'Laporan Insight dan Rekomendasi Konten', 'description' => 'Contoh format laporan bulanan berisi reach, impression, engagement, konten terbaik, dan rekomendasi strategi bulan berikutnya.', 'likes' => 'ER 7.4%', 'reach' => '+32%', 'tags' => json_encode(['Insight', 'Evaluasi', 'Strategi']), 'sort_order' => 3, 'created_at' => $now, 'updated_at' => $now],
+            ['icon' => '☕', 'image' => 'kopi-susu.jpg', 'theme' => 'theme-coffee', 'type' => 'F&B Content Mockup', 'title' => 'Kampanye Menu Kopi Susu Signature', 'description' => 'Mockup feed Instagram untuk kedai kopi lokal dengan fokus pada foto produk, promo bundling, dan caption ajakan kunjungan.', 'likes' => '428', 'reach' => '6.2K', 'tags' => json_encode(['Feed IG', 'Copywriting', 'Promo Menu']), 'sort_order' => 1, 'created_at' => $now, 'updated_at' => $now],
+            ['icon' => '👗', 'image' => 'thrift-ootd.jpg', 'theme' => 'theme-fashion', 'type' => 'Fashion Content Mockup', 'title' => 'Lookbook Thrift: Mix & Match OOTD', 'description' => 'Simulasi konten carousel dan Reels/TikTok untuk thrift shop, menonjolkan styling produk dan detail katalog yang lebih rapi.', 'likes' => '612', 'reach' => '8.5K', 'tags' => json_encode(['Carousel', 'Reels', 'OOTD']), 'sort_order' => 2, 'created_at' => $now, 'updated_at' => $now],
+            ['icon' => '📊', 'image' => 'report-insight.jpg', 'theme' => 'theme-report', 'type' => 'Monthly Report Mockup', 'title' => 'Laporan Insight dan Rekomendasi Konten', 'description' => 'Contoh format laporan bulanan berisi reach, impression, engagement, konten terbaik, dan rekomendasi strategi bulan berikutnya.', 'likes' => 'ER 7.4%', 'reach' => '+32%', 'tags' => json_encode(['Insight', 'Evaluasi', 'Strategi']), 'sort_order' => 3, 'created_at' => $now, 'updated_at' => $now],
         ]);
 
         DB::table('testimonials')->insert([
@@ -156,7 +156,7 @@ class DatabaseSeeder extends Seeder
             ['icon' => 'meta-business.png', 'name' => 'Meta Business Suite', 'category' => 'Scheduling', 'sort_order' => 4, 'created_at' => $now, 'updated_at' => $now],
             ['icon' => 'google-analytics.png', 'name' => 'Google Analytics', 'category' => 'Analitik Data', 'sort_order' => 5, 'created_at' => $now, 'updated_at' => $now],
             ['icon' => 'google-workspace.png', 'name' => 'Google Workspace', 'category' => 'Kolaborasi Tim', 'sort_order' => 6, 'created_at' => $now, 'updated_at' => $now],
-        ]); 
+        ]);
 
         DB::table('faqs')->insert([
             ['question' => 'Apakah saya bisa minta revisi desain?', 'answer' => 'Bisa. Setiap konten mendapat 2x revisi sebelum diposting. Kami memastikan kamu puas sebelum konten tayang.', 'sort_order' => 1, 'created_at' => $now, 'updated_at' => $now],

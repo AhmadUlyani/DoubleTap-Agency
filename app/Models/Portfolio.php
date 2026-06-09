@@ -8,6 +8,7 @@ class Portfolio extends Model
 {
     protected $fillable = [
         'icon',
+        'image',
         'theme',
         'type',
         'title',
