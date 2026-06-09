@@ -21,9 +21,23 @@
                 <span class="logo-text">DoubleTap<span class="logo-accent">Agency</span></span>
             </a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="{{ url('/') }}">Beranda</a></li>
-                <li><a href="{{ url('/service') }}">Layanan</a></li>
-                <li><a href="{{ url('/about') }}">Tentang Kami</a></li>
+                <li>
+                    <a href="{{ url('/') }}" class="{{ request()->is('/') ? 'nav-active' : '' }}">
+                        Beranda
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ url('/service') }}" class="{{ request()->is('service') ? 'nav-active' : '' }}">
+                        Layanan
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ url('/about') }}" class="{{ request()->is('about') ? 'nav-active' : '' }}">
+                        Tentang Kami
+                    </a>
+                </li>
                 @if (session('client_id'))
                     <li><a href="{{ url('/dashboard') }}">Dashboard Klien</a></li>
                     <li>
@@ -35,8 +49,18 @@
                         </form>
                     </li>
                 @else
-                    <li><a href="{{ url('/login') }}" class="nav-login">Login Klien</a></li>
-                    <li><a href="{{ url('/contact') }}" class="nav-cta">Konsultasi Gratis</a></li>
+                    <li>
+                        <a href="{{ url('/login') }}"
+                            class="nav-login {{ request()->is('login') ? 'nav-active-login' : '' }}">
+                            Login Klien
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ url('/contact') }}"
+                            class="nav-cta {{ request()->is('contact') ? 'nav-active-cta' : '' }}">
+                            Konsultasi
+                        </a>
+                    </li>
                 @endif
             </ul>
             <button class="hamburger" id="hamburger">☰</button>
